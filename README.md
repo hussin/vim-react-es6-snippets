@@ -1,4 +1,4 @@
-**Note: I've ported `/snippets` to es6 class usage.  I've not touched `/UtiliSnips`.** 
+**Note: justinj's snipmate snippets originally ported to ES6 by bentayloruk, I only use Ultisnips**
 
 
 vim-react-es6-snippets
@@ -6,7 +6,7 @@ vim-react-es6-snippets
 
 A set of snippets for Vim to work with Facebook's [React](http://facebook.github.io/react/) library.
 
-A direct port of the awesome snippets from 
+A direct port of the awesome snippets from
 [justinj/vim-react-snippets](https://github.com/justinj/vim-react-snippets).
 
 Requires [vim-snipmate](https://github.com/garbas/vim-snipmate).
