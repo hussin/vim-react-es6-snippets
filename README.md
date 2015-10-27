@@ -1,4 +1,4 @@
-**Note: justinj's snipmate snippets originally ported to ES6 by bentayloruk, I only use Ultisnips**
+**Note: justinj's snipmate snippets originally ported to ES6 by bentayloruk, I only use Ultisnips so those are the only ones I've tested**
 
 
 vim-react-es6-snippets
@@ -9,12 +9,12 @@ A set of snippets for Vim to work with Facebook's [React](http://facebook.github
 A direct port of the awesome snippets from
 [justinj/vim-react-snippets](https://github.com/justinj/vim-react-snippets).
 
-Requires [vim-snipmate](https://github.com/garbas/vim-snipmate).
+Requires [UltiSnips](https://github.com/SirVer/ultisnips).
 
 Installation
 ============
 
-Use your preferred Vim plugin installation method.  Vundle or Pathogen should be fine (I use Pathogen).
+Use your preferred (neo)vim plugin installation method or just copy the snippets over to the relevant folder.
 
 Usage
 =====
@@ -37,4 +37,5 @@ getDefaultProps() {
 ```
 
 And a bunch of others!
-Check `snippets/javascript.snippets` to see the full list.
+
+You may have to set `g:UltiSnipsExpandTrigger` and `g:UltiSnipsJumpForwardTrigger`, depending on which other tab-based plugins you have installed. I personally use Control+j. Check the UltiSnips help page for more info and `UltiSnips/javascript.snippets` in this repo to see the full snippet list.
