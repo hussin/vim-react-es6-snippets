@@ -252,3 +252,11 @@ endsnippet
 snippet trp
 this.transferPropsTo(${VISUAL}$0);
 endsnippet
+
+#
+## DOM render
+#
+
+snippet domren "render component to DOM" b
+ReactDOM.render(${1:<$2 />}, document.${3:querySelector('$4')});
+endsnippet
