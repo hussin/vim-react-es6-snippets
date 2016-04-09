@@ -2,6 +2,128 @@
 #  React snippets
 #
 
+#
+## create class component
+#
+
+snippet rcc "create class component" b
+import React, { ${1:PropTypes, }Component } from 'react';
+
+class ${2:ClassComponent} extends Component {
+
+	$0
+	render() {
+		return (
+			${4:<div>
+			  $5
+			</div}
+		);
+	}
+}
+
+${3:export default $2;}
+endsnippet
+
+#
+## functional component
+#
+
+snippet funCom "create simple functional component" b
+import React from 'react';
+
+const ${1:functionalComponent} = (${2:props}) => {
+  $0
+  return (
+    ${3:<div>
+		  $4
+		</div>}
+  );
+};
+
+export default $1;
+endsnippet
+
+#
+## class component
+#
+
+snippet classCom "create cimple class component" b
+import React, { Component } from 'react';
+
+class ${1:ClassComponent} extends Component {
+  constructor(props) {
+		super(props);
+
+		${2:this.state = {
+		  $3
+		};}
+	}
+
+  $0
+	render() {
+    return (
+		  ${4:<div>
+        $5
+			</div>}
+		);
+	}
+}
+
+export default $1;
+endsnippet
+
+#
+## imports & exports
+#
+
+snippet impR "import React from 'react'" b
+import React from 'react';
+$0
+endsnippet
+
+snippet impD "import ReactDOM from 'react-dom'" b
+import ReactDOM from 'react-dom';
+$0
+endsnippet
+
+snippet impRD "import React & ReactDOM" b
+import React from 'react';
+import ReactDOM from 'react-dom';
+$0
+endsnippet
+
+snippet impC "import component" b
+import $1 from '$2';
+$0
+endsnippet
+
+snippet jsx "define jsx dom" b
+/**
+ * @jsx React.DOM
+ */
+$0
+endsnippet
+
+snippet expdef "export default" b
+export default $0;
+endsnippet
+
+#
+## return jsx
+#
+
+snippet ret() "return ();" b
+return (
+  ${1:<div>
+    $2
+	</div>}
+);
+endsnippet
+
+#
+## Component specs & lifecycle
+#
+
 snippet cs "React.addons.classSet" b
 var cx = React.addons.classSet;
 endsnippet
@@ -14,6 +136,12 @@ endsnippet
 
 snippet cdup "component did update" b
 componentDidUpdate(prevProps, prevState) {
+	${1}
+},$0
+endsnippet
+
+snippet scu "should component update"
+shouldComponentUpdate(nextProps, nextState) {
 	${1}
 },$0
 endsnippet
@@ -60,22 +188,45 @@ getDefaultProps() {
 },$0
 endsnippet
 
+snippet ism "is mounted"
+isMounted()
+endsnippet
+
+snippet ren
+render() {
+	return (
+		${1:<div>
+		  $2
+		</div>}
+	);
+}
+$0
+endsnippet
+
+#
+## state
+#
+
+snippet constr "construct state" b
+constructor(props) {
+  super(props);
+
+  ${1:this.state = {
+	  $2
+	};}
+}
+
+$0
+endsnippet
+
 snippet gis "get initial state" b
 getInitialState() {
 	return {
 		${1}: ${2}
 	};
-},$0
-endsnippet
+}
 
-snippet ism "is mounted"
-isMounted()
-endsnippet
-
-snippet jsx "define jsx dom" b
-/**
- * @jsx React.DOM
- */
+$0
 endsnippet
 
 snippet pt "propTypes" b
@@ -84,45 +235,10 @@ propTypes: {
 },
 endsnippet
 
-snippet rcc "create class/component" b
-${1:/**
-* @jsx React.DOM
-*/}
-
-import React, { ${2:PropTypes, }Component } from 'react';
-
-class ${3:ClassName} extends Component {
-
-	$0
-	render() {
-		return (
-			${VISUAL}$5
-		);
-	}
-
-}
-
-${4:export default $3;}
-endsnippet
-
-snippet ren
-render() {
-	return (
-		${1:<div />}
-	);
-}$0
-endsnippet
-
 snippet sst "set state" b
 this.setState({
 	${1}: ${2}
 });$0
-endsnippet
-
-snippet scu "should component update"
-shouldComponentUpdate(nextProps, nextState) {
-	${1}
-},$0
 endsnippet
 
 snippet props "get property" i
