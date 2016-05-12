@@ -260,3 +260,27 @@ endsnippet
 snippet domren "render component to DOM" b
 ReactDOM.render(${1:<$2 />}, document.${3:querySelector('$4')});
 endsnippet
+
+#
+## React Router
+#
+
+snippet impL "import Link from react-router" b
+import { Link } from 'react-router';
+endsnippet
+
+snippet routes "import Route, IndexRoute" b
+import React from 'react';
+import { Route, IndexRoute } from 'react-router';
+
+import ${1} from '${2}';
+import ${3} from '${4}';
+import ${6} from '${7}';
+$0
+export default (
+  <Route path="/" component={$1}>
+	  <IndexRoute component={$3} />
+		<Route path="${5}" component={$6} />
+	</Route>
+);
+endsnippet
